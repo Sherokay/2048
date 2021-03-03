@@ -15,12 +15,14 @@ function newIndex () {
   let i = parseInt(num / 4);
   let j = num % 4;
   while (data[i][j] !== 0) {
-    console.log(i,j,flag,"not 0");
+    // console.log(i,j,flag,"not 0");
     if (flag > 15) {
       i = j = 5;
-      wrong++;
-      if (wrong > 4) {
-        newGame();
+      if (wrong > 2) {
+        if (confirm("你输了，是否开始新游戏？")) {
+          wrong = 0;
+          newGame();
+        }
       }
       break;
     }
@@ -39,8 +41,14 @@ function addBox () {
   let newNum = [2,4];
   let {i,j} = newIndex();
   let key = parseInt(Math.random() + 0.3);
-  data[i][j] += newNum[key];
-  console.log(i,j,newNum[key]);
+  try {
+    data[i][j] += newNum[key];
+    wrong = 0;
+  } catch (error) {
+    wrong++;
+    console.log(wrong);
+  }
+  // console.log(i,j,newNum[key]);
   score += newNum[key];
   $(".score").html(score);
   randerData();

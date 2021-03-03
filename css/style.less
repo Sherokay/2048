@@ -1,64 +1,67 @@
+* {
+  margin: 0;
+  padding: 0;
+}
 body {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translateX(-50%) translateY(-50%);
-  width: 320px;
-  height: 450px;
+  width: 5rem;
   margin: 0 auto;
+  padding: 0 0.5rem;
   background-color: #faf8ef;
+  box-sizing: border-box;
 }
 header {
-  width: 280px;
-  height: 55px;
-  margin: 10px auto;
+  width: 4rem;
+  height: 1rem;
   text-align: center;
+  margin: 0.2rem 0;
   h1 {
     float: left;
-    line-height: 55px;
-    margin: 0;
+    line-height: 1rem;
+    font-size: 0.5rem;
     color: #776e65;
   }
   div {
     float: right;
-    min-width: 55px;
-    height: 55px;
-    margin-left: 10px;
+    width: 1rem;
+    height: 1rem;
+    margin-left: 0.1rem;
     background-color: #BBADA0;
     border-radius: 5px;
+    font-size: .3125rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
     h4 {
-      margin: 2px 0 2px 0;
+      width: 100%;
       color: #eee4da;
     }
     span {
       color: #fff;
-      font-size: 20px;
       font-weight: 900;
     }
   }
 }
 main {
-  width: 280px;
-  height: 280px;
+  width: 4rem;
+  height: 4rem;
   box-sizing: border-box;
-  margin: 20px auto;
-  background-color: #BBADA0;
+  padding: 0.1rem;
   border-radius: 5px;
-  padding: 10px;
-  overflow: hidden;
+  background-color: #BBADA0;
   .box {
     float: left;
-    width: 57.5px;
-    height: 57.5px;
-    line-height: 57.5px;
-    font-size: 30px;
+    width: .875rem;
+    height: .875rem;
+    line-height: .875rem;
+    font-size: 0.5rem;
     font-weight: 700;
-    margin-right: 10px;
-    margin-bottom: 10px;
     background-color: #CDC1B4;
     color: #776E65;
-    border-radius: 5px;
     text-align: center;
+    margin-right: 0.1rem;
+    margin-bottom: 0.1rem;
+    border-radius: 5px;
     &:nth-of-type(4n) {
       margin-right: 0;
     }
@@ -88,39 +91,39 @@ main {
   .b-128 {
     background-color: #EDCF72;
     color: #fff;
-    font-size: 25px;
+    font-size: 0.4rem;
   }
   .b-256{
-    background-color: #EDCF72;
+    background-color: #edcc61;
     color: #fff;
-    font-size: 25px;
+    font-size: 0.4rem;
   }
   .b-512 {
-    background-color: #EDCF72;
+    background-color: #edc850;
     color: #fff;
-    font-size: 25px;
+    font-size: 0.4rem;
   }
   .b-1024 {
-    background-color: #EDCF72;
+    background-color: #edc53f;
     color: #fff;
-    font-size: 20px;
+    font-size: 0.3rem;
   }
   .b-2048 {
-    background-color: #EDCF72;
+    background-color: #edc22e;
     color: #fff;
-    font-size: 20px;
+    font-size: 0.3rem;
   }
 }
 footer {
   text-align: center;
+  margin: 0.3rem 0;
   button {
     background-color: #BBADA0;
     color: #fff;
     border: none;
-    padding: 5px 10px;
+    padding: 0.1rem;
     border-radius: 5px;
     font-weight: 700;
-    font-size: 15px;
     outline: none;
   }
 }
